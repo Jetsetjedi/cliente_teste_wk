@@ -8,6 +8,7 @@
 EX. Cep;Pri_mome;Segun_nome;Documento;Natureza
 
 # Fucionalidades
-1. Cadastro Unitario
-2. Cadastro em lote
-3. Alteração Unitaria
+1. Cadastro Unitario.
+2. Cadastro em lote.
+3. Alteração Unitaria.
+4. exclusão.
