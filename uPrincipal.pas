@@ -207,6 +207,7 @@ begin
     grid_lista_pessoa.Cells[0, i] :=
       IntToStr(FDM_wk_lista_localidpessoa.AsInteger);
     grid_lista_pessoa.Cells[1, i] := FDM_wk_lista_localpnome.AsString;
+    grid_lista_pessoa.Cells[2, i] := FDM_wk_lista_localsnome.AsString;
     inc(i);
     FDM_wk_lista_local.Next;
   end;
