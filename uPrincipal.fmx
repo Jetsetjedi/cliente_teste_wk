@@ -1,0 +1,625 @@
+object FormList: TFormList
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Lista Pessoas'
+  ClientHeight = 664
+  ClientWidth = 917
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object MRetget: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 936.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 489.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Visible = False
+    Viewport.Width = 309.000000000000000000
+    Viewport.Height = 485.000000000000000000
+  end
+  object Panel1: TPanel
+    Position.X = 382.000000000000000000
+    Position.Y = 39.000000000000000000
+    Size.Width = 531.000000000000000000
+    Size.Height = 586.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+    object grid_lista_pessoa: TStringGrid
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 89.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 357.000000000000000000
+      Size.Height = 531.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick]
+      RowCount = 0
+      RowHeight = 21.000000000000000000
+      Viewport.Width = 353.000000000000000000
+      Viewport.Height = 506.000000000000000000
+      object col_id_pessoa: TStringColumn
+        Header = 'ID'
+        Size.Width = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object col_pnome: TStringColumn
+        Header = 'Pimeiro Nome'
+        Position.X = 57.000000000000000000
+        Size.Width = 148.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object col_snome: TStringColumn
+        Header = 'Segundo Nome'
+        Position.X = 205.000000000000000000
+        Size.Width = 144.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+    end
+    object Btn_get: TButton
+      Position.X = 190.000000000000000000
+      Position.Y = 547.000000000000000000
+      Size.Width = 171.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Text = 'Get - Listar todo Cadastro'
+      OnClick = Btn_getClick
+    end
+  end
+  object Panel2: TPanel
+    Position.X = 4.000000000000000000
+    Position.Y = 39.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 234.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+    object Label2: TLabel
+      Position.X = 15.000000000000000000
+      Position.Y = 55.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Primeiro Nome'
+    end
+    object Edt_pnome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 119.000000000000000000
+      Position.Y = 51.000000000000000000
+      Size.Width = 186.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Position.X = 14.000000000000000000
+      Position.Y = 91.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Segundo Nome'
+    end
+    object Edt_snome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 120.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label4: TLabel
+      Position.X = 15.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Documento'
+    end
+    object Edt_doc: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.X = 119.000000000000000000
+      Position.Y = 125.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 168.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Matureza'
+    end
+    object Edt_natural: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      KeyboardType = NumberPad
+      Text = '0'
+      Position.X = 120.000000000000000000
+      Position.Y = 164.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label6: TLabel
+      Position.X = 17.000000000000000000
+      Position.Y = 204.000000000000000000
+      Size.Width = 93.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Data Cadastro'
+    end
+    object Lbl_dtacad: TLabel
+      StyledSettings = [Family, Size, Style]
+      Position.X = 122.000000000000000000
+      Position.Y = 203.000000000000000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claBlue
+      Text = 'dtacad'
+    end
+    object Label7: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 36.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Cep'
+    end
+    object edt_cep: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Text = '00000000'
+      Position.X = 118.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 189.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Btn_post: TButton
+    Position.X = 49.000000000000000000
+    Position.Y = 291.000000000000000000
+    Size.Width = 119.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+    Text = 'Post - Inclu'#237'r'
+    OnClick = Btn_postClick
+  end
+  object Button1: TButton
+    Position.X = -313.000000000000000000
+    Position.Y = 98.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    Text = 'Post - Inclu'#237'r'
+    OnClick = Btn_postClick
+  end
+  object Btn_put: TButton
+    Position.X = 48.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+    Text = 'Put - Alterar'
+    OnClick = Btn_putClick
+  end
+  object Btn_del: TButton
+    Position.X = 180.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 118.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Delete - Exclu'#237'r'
+    OnClick = Btn_delClick
+  end
+  object Btn_post_list: TButton
+    Position.X = 179.000000000000000000
+    Position.Y = 291.000000000000000000
+    Size.Width = 119.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 21
+    Text = 'Post - Lista'
+    OnClick = Btn_post_listClick
+  end
+  object Btn_fechar: TButton
+    Position.X = 832.000000000000000000
+    Position.Y = 635.000000000000000000
+    TabOrder = 22
+    Text = 'Fechar'
+    OnClick = Btn_fecharClick
+  end
+  object Label9: TLabel
+    StyledSettings = []
+    Position.X = 291.000000000000000000
+    Position.Y = 9.000000000000000000
+    Size.Width = 309.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Segoe UI Emoji'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.Style = [fsBold]
+    TextSettings.FontColor = claBlue
+    Text = 'Teste WK Tecnology  - Amo muito Tudo isso :)'
+  end
+  object Label1: TLabel
+    Position.X = 5.000000000000000000
+    Position.Y = 9.000000000000000000
+    Size.Width = 53.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'ID User'
+  end
+  object Edt_id: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Text = '0'
+    Position.X = 50.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Caret.Color = claSkyblue
+  end
+  object Layout_data_end: TScaledLayout
+    OriginalWidth = 371.000000000000000000
+    OriginalHeight = 233.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 394.000000000000000000
+    Size.Width = 371.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    object Lbl_idend: TLabel
+      Position.X = 11.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'idend'
+    end
+    object Lbl_uf: TLabel
+      Position.X = 158.000000000000000000
+      Position.Y = 19.000000000000000000
+    end
+    object Lbl_cidade: TLabel
+      Position.X = 10.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 317.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lbl_bairro: TLabel
+      Position.X = 10.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 324.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lbl_lougradouro: TLabel
+      Position.X = 9.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 323.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Lbl_numero: TLabel
+      Position.X = 9.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Lbl_complento: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 190.000000000000000000
+      Size.Width = 281.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Lbl_cep: TLabel
+      Position.X = 187.000000000000000000
+      Position.Y = 154.000000000000000000
+    end
+  end
+  object Op_list_cad_csv: TOpenDialog
+    Filter = 'CSV|*.csv'
+    Left = 224
+    Top = 240
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    BaseURL = 'http://localhost:1717/datasnap/rest/TSM/pessoa/10'
+    Params = <>
+    HandleRedirects = True
+    RaiseExceptionOn500 = False
+    Left = 185
+    Top = 613
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Method = rmPUT
+    Params = <
+      item
+        Kind = pkURLSEGMENT
+        name = 'dados'
+        ContentType = ctTEXT_CSV
+      end>
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 113
+    Top = 612
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'text/html'
+    Left = 33
+    Top = 611
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 255
+    Top = 613
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = RESTResponse1
+      FieldName = 'Content'
+      Control = MRetget
+      Track = False
+    end
+  end
+  object FDM_wk_lista_local: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 580
+    Top = 617
+    object FDM_wk_lista_localidpessoa: TIntegerField
+      FieldName = 'id_pessoa'
+    end
+    object FDM_wk_lista_localpnome: TStringField
+      FieldName = 'pnome'
+    end
+    object FDM_wk_lista_localsnome: TStringField
+      FieldName = 'snome'
+    end
+    object FDM_wk_lista_localdoc: TStringField
+      FieldName = 'doc'
+    end
+    object FDM_wk_lista_localnatureza: TIntegerField
+      FieldName = 'natureza'
+    end
+    object FDM_wk_lista_localdta_registro: TStringField
+      FieldName = 'dta_registro'
+    end
+    object FDM_wk_lista_localcep: TStringField
+      FieldName = 'cep'
+    end
+  end
+  object FDM_enderecos: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 480
+    Top = 616
+    object FDM_enderecosidendereco: TIntegerField
+      FieldName = 'idendereco'
+    end
+    object FDM_enderecosidpessoa: TIntegerField
+      FieldName = 'idpessoa'
+    end
+    object FDM_enderecosdscep: TStringField
+      FieldName = 'dscep'
+    end
+  end
+  object FDM_temp_end: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'id_endereco'
+        DataType = ftInteger
+      end
+      item
+        Name = 'uf'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'cidade'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'bairro'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'lougradouro'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'numero'
+        DataType = ftInteger
+      end
+      item
+        Name = 'complemento'
+        DataType = ftString
+        Size = 20
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    FormatOptions.AssignedValues = [fvMaxBcdPrecision, fvMaxBcdScale]
+    FormatOptions.MaxBcdPrecision = 2147483647
+    FormatOptions.MaxBcdScale = 2147483647
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockWait, uvRefreshMode, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 382
+    Top = 616
+    Content = {
+      414442530F00AF1A3E030000FF00010001FF02FF03040018000000460044004D
+      005F00740065006D0070005F0065006E00640005000A0000005400610062006C
+      006500060000000000070000080032000000090000FF0AFF0B04001600000069
+      0064005F0065006E00640065007200650063006F00050016000000690064005F
+      0065006E00640065007200650063006F000C00010000000E000D000F00011000
+      01110001120001130001140001150016000000690064005F0065006E00640065
+      007200650063006F00FEFF0B0400040000007500660005000400000075006600
+      0C00020000000E0016001700140000000F000110000111000112000113000114
+      000115000400000075006600180014000000FEFF0B04000C0000006300690064
+      0061006400650005000C0000006300690064006100640065000C00030000000E
+      0016001700140000000F000110000111000112000113000114000115000C0000
+      00630069006400610064006500180014000000FEFF0B04000C00000062006100
+      6900720072006F0005000C000000620061006900720072006F000C0004000000
+      0E0016001700140000000F000110000111000112000113000114000115000C00
+      0000620061006900720072006F00180014000000FEFF0B0400160000006C006F
+      00750067007200610064006F00750072006F000500160000006C006F00750067
+      007200610064006F00750072006F000C00050000000E0016001700140000000F
+      00011000011100011200011300011400011500160000006C006F007500670072
+      00610064006F00750072006F00180014000000FEFF0B04000C0000006E007500
+      6D00650072006F0005000C0000006E0075006D00650072006F000C0006000000
+      0E000D000F000110000111000112000113000114000115000C0000006E007500
+      6D00650072006F00FEFF0B04001600000063006F006D0070006C0065006D0065
+      006E0074006F0005001600000063006F006D0070006C0065006D0065006E0074
+      006F000C00070000000E0016001700140000000F000110000111000112000113
+      000114000115001600000063006F006D0070006C0065006D0065006E0074006F
+      00180014000000FEFEFF19FEFF1AFEFF1BFEFEFEFF1CFEFF1DFF1EFEFEFE0E00
+      4D0061006E0061006700650072001E0055007000640061007400650073005200
+      650067006900730074007200790012005400610062006C0065004C0069007300
+      74000A005400610062006C00650008004E0061006D006500140053006F007500
+      7200630065004E0061006D0065000A0054006100620049004400240045006E00
+      66006F0072006300650043006F006E00730074007200610069006E0074007300
+      1E004D0069006E0069006D0075006D0043006100700061006300690074007900
+      180043006800650063006B004E006F0074004E0075006C006C00140043006F00
+      6C0075006D006E004C006900730074000C0043006F006C0075006D006E001000
+      53006F007500720063006500490044000E006400740049006E00740033003200
+      1000440061007400610054007900700065001400530065006100720063006800
+      610062006C006500120041006C006C006F0077004E0075006C006C0008004200
+      61007300650014004F0041006C006C006F0077004E0075006C006C0012004F00
+      49006E0055007000640061007400650010004F0049006E005700680065007200
+      65001A004F0072006900670069006E0043006F006C004E0061006D0065001800
+      6400740041006E007300690053007400720069006E0067000800530069007A00
+      6500140053006F007500720063006500530069007A0065001C0043006F006E00
+      730074007200610069006E0074004C0069007300740010005600690065007700
+      4C006900730074000E0052006F0077004C006900730074001800520065006C00
+      6100740069006F006E004C006900730074001C00550070006400610074006500
+      73004A006F00750072006E0061006C000E004300680061006E00670065007300}
+    object FDM_temp_endid_endereco: TIntegerField
+      FieldName = 'id_endereco'
+    end
+    object FDM_temp_enduf: TStringField
+      FieldName = 'uf'
+    end
+    object FDM_temp_endcidade: TStringField
+      FieldName = 'cidade'
+    end
+    object FDM_temp_endbairro: TStringField
+      FieldName = 'bairro'
+    end
+    object FDM_temp_endlougradouro: TStringField
+      FieldName = 'lougradouro'
+    end
+    object FDM_temp_endnumero: TIntegerField
+      FieldName = 'numero'
+    end
+    object FDM_temp_endcomplemento: TStringField
+      FieldName = 'complemento'
+    end
+  end
+  object FDM_cadastros: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'cep'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'prinome'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'segunome'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'docnum'
+        DataType = ftString
+        Size = 20
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 686
+    Top = 607
+    object FDM_cadastroscep: TStringField
+      FieldName = 'cep'
+    end
+    object FDM_cadastrosprinome: TStringField
+      FieldName = 'prinome'
+    end
+    object FDM_cadastrossegunome: TStringField
+      FieldName = 'segunome'
+    end
+    object FDM_cadastrosdocnum: TStringField
+      FieldName = 'docnum'
+    end
+    object FDM_cadastrosnatureza: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'natureza'
+      Calculated = True
+    end
+  end
+  object thr_send_data: TIdThreadComponent
+    Active = False
+    Loop = False
+    Priority = tpNormal
+    StopMode = smTerminate
+    OnRun = thr_send_dataRun
+    OnTerminate = thr_send_dataTerminate
+    Left = 296
+    Top = 442
+  end
+end
