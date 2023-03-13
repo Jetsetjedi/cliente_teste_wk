@@ -135,7 +135,7 @@ var
   lst_nj: Boolean;
 begin
   // listar ninja
-  lst_nj := listapessoas(100);
+  lst_nj := listapessoas(1);
   Exit;
 
 //  Self.CarregarRESTClient;

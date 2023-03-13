@@ -135,28 +135,28 @@ var
   lst_nj: Boolean;
 begin
   // listar ninja
-  lst_nj := listapessoas(100);
+  lst_nj := listapessoas(0);
   Exit;
 
-//  Self.CarregarRESTClient;
-//  RESTRequest1.Resource := '/pessoas';
-//  RESTRequest1.Method := TRESTRequestmethod.rmGET;
-//  RESTRequest1.Execute;
-//
-//  vJSONObject := RESTResponse1.JSONValue as TJSONObject;
-//  vJSONPair := vJSONObject.Get(0);
-//  vJSONarray := vJSONPair.JSONValue as TJSONArray;
-//
-//  vPessoa := TJson.JsonToObject<TPessoa>(vJSONarray.Get(0).ToJSON);
-//  try
-//    Edt_id.Text := vPessoa.idpessoa.ToString;
-//    Edt_pnome.Text := vPessoa.nmprimeiro;
-//    Edt_doc.Text := vPessoa.nmsegundo;
-//    Edt_snome.Text := vPessoa.nmsegundo;
-//    Edt_natural.Text := vPessoa.flnatureza.ToString;
-//  finally
-//    vPessoa.Free;
-//  end;
+  Self.CarregarRESTClient;
+  RESTRequest1.Resource := '/pessoas';
+  RESTRequest1.Method := TRESTRequestmethod.rmGET;
+  RESTRequest1.Execute;
+
+  vJSONObject := RESTResponse1.JSONValue as TJSONObject;
+  vJSONPair := vJSONObject.Get(0);
+  vJSONarray := vJSONPair.JSONValue as TJSONArray;
+
+  vPessoa := TJson.JsonToObject<TPessoa>(vJSONarray.Get(0).ToJSON);
+  try
+    Edt_id.Text := vPessoa.idpessoa.ToString;
+    Edt_pnome.Text := vPessoa.nmprimeiro;
+    Edt_doc.Text := vPessoa.nmsegundo;
+    Edt_snome.Text := vPessoa.nmsegundo;
+    Edt_natural.Text := vPessoa.flnatureza.ToString;
+  finally
+    vPessoa.Free;
+  end;
 
 end;
 
@@ -172,6 +172,7 @@ var
 
 begin
   i := 0;
+  j := 0;
   Result := False;
   Self.CarregarRESTClient;
 
