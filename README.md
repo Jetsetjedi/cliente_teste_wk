@@ -6,3 +6,8 @@
  Para insert em lote o formato padrão das linhas esta no arquivo Lista_teste_WK.csv.
 
 EX. Cep;Pri_mome;Segun_nome;Documento;Natureza
+
+# Fucionalidades
+1. Cadastro Unitario
+2. Cadastro em lote
+3. Alteração Unitaria
